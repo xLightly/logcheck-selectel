@@ -1,7 +1,7 @@
 package analyzer_test
 
 import (
-	"logcheck-selectel/pkg/analyzer/analyzer"
+	"logcheck-selectel/pkg/analyzer"
 	"testing"
 
 	"golang.org/x/tools/go/analysis/analysistest"
