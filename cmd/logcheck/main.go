@@ -1,7 +1,7 @@
 package main
 
 import (
-	"logcheck-selectel/pkg/analyzer/analyzer"
+	"logcheck-selectel/pkg/analyzer"
 
 	"golang.org/x/tools/go/analysis/singlechecker"
 )

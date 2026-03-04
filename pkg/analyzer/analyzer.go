@@ -5,7 +5,7 @@ import (
 	"go/constant"
 	"go/token"
 	"go/types"
-	"logcheck-selectel/pkg/rules/rules"
+	"logcheck-selectel/pkg/rules"
 	"strings"
 
 	"golang.org/x/tools/go/analysis"
