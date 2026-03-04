@@ -153,7 +153,7 @@ func checkAndReport(pass *analysis.Pass, call *ast.CallExpr, msgExpr ast.Expr, m
 
 	if cfg.Rules.EnglishOnly {
 		if diag := rules.CheckEnglishOnly(msg); diag != "" {
-			pass.Reportf(msgExpr.Pos(), diag)
+			pass.Reportf(msgExpr.Pos(), "%s", diag)
 		}
 	}
 
@@ -166,14 +166,14 @@ func checkAndReport(pass *analysis.Pass, call *ast.CallExpr, msgExpr ast.Expr, m
 
 	if cfg.Rules.NoSensitive {
 		if diag := rules.CheckNoSensitiveData(msg, cfg.SensitivePatterns); diag != "" {
-			pass.Reportf(msgExpr.Pos(), diag)
+			pass.Reportf(msgExpr.Pos(), "%s", diag)
 		}
 	}
 }
 
 func report(pass *analysis.Pass, expr ast.Expr, message, oldMsg, newMsg string) {
 	if oldMsg == newMsg {
-		pass.Reportf(expr.Pos(), message)
+		pass.Reportf(expr.Pos(), "%s", message)
 		return
 	}
 
