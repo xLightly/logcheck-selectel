@@ -1,0 +1,7 @@
+rules:
+  lowercase_start: true
+  english_only: true
+  no_special_chars: true
+  no_sensitive: true
+sensitive_patterns:
+allowed_special_chars: ""
