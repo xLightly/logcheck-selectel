@@ -1,0 +1,15 @@
+# Example .golangci.yml showing how to use logcheck as a custom plugin.
+
+linters-settings:
+  custom:
+    logcheck:
+      # Path to the compiled plugin (see README for build instructions).
+      path: ./logcheck.so
+      description: "Checks log messages for convention compliance"
+      original-url: github.com/logcheck
+      settings:
+        config: ".logcheck.yml"
+
+linters:
+  enable:
+    - logcheck
